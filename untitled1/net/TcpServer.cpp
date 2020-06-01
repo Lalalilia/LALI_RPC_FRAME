@@ -51,9 +51,7 @@ void TcpServer::newConnection(int socketfd, const AddressOps & peerAddr) {
     conn->connectEstablished();
 }
 
-void TcpServer::destroyConnection(const TcpConnectionPtr& conn) {
-
-
+void TcpServer::destroyConnection(const TcpConnectionPtr& conn){
     loop_->runInLoop(std::bind(&TcpServer::destroyConnectionInLoop,this,conn));
 }
 

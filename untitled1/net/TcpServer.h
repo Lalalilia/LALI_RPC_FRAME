@@ -6,7 +6,6 @@
 #define UNTITLED1_TCPSERVER_H
 
 #include <string>
-#include <boost/scoped_ptr.hpp>
 #include <memory>
 #include "Acceptor.h"
 #include <map>
