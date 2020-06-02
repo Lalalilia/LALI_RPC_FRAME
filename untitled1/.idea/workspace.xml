@@ -91,7 +91,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Thread.cc" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
     <configuration name="untitled1" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled1" TARGET_NAME="untitled1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled1" RUN_TARGET_NAME="untitled1">
@@ -157,6 +157,8 @@
       <workItem from="1590713669750" duration="4386000" />
       <workItem from="1590890976109" duration="48000" />
       <workItem from="1590973488363" duration="1070000" />
+      <workItem from="1590975528591" duration="1415000" />
+      <workItem from="1591059506781" duration="670000" />
     </task>
     <servers />
   </component>
@@ -164,6 +166,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="313" y="119" key="#Notifications" timestamp="1591059514752">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="313" y="119" key="#Notifications/0.0.1440.920@0.0.1440.920" timestamp="1591059514752" />
     <state x="759" y="177" key="#com.intellij.ide.util.MemberChooser" timestamp="1590201208812">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
@@ -172,9 +178,10 @@
       <screen x="67" y="27" width="1853" height="1173" />
     </state>
     <state x="767" y="476" key="#xdebugger.evaluate/67.27.1853.1173@67.27.1853.1173" timestamp="1587543259177" />
-    <state x="776" y="370" width="424" height="484" key="FileChooserDialogImpl" timestamp="1585965550359">
-      <screen x="67" y="27" width="1853" height="1173" />
+    <state x="835" y="284" width="331" height="380" key="FileChooserDialogImpl" timestamp="1591059555152">
+      <screen x="0" y="0" width="1440" height="920" />
     </state>
+    <state x="835" y="284" width="331" height="380" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1591059555152" />
     <state x="776" y="370" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1173@67.27.1853.1173" timestamp="1585965550359" />
     <state width="1874" height="210" key="GridCell.Tab.0.bottom" timestamp="1590199152121">
       <screen x="0" y="24" width="1920" height="1152" />
@@ -216,16 +223,16 @@
     </state>
     <state width="1874" height="256" key="GridCell.Tab.1.right/0.24.1920.1152@0.24.1920.1152" timestamp="1589512327648" />
     <state width="1807" height="266" key="GridCell.Tab.1.right/67.27.1853.1173@67.27.1853.1173" timestamp="1587628398107" />
-    <state x="253" y="163" width="914" height="707" key="SettingsEditor" timestamp="1590201086223">
+    <state x="253" y="163" width="914" height="707" key="SettingsEditor" timestamp="1591059568832">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="253" y="163" width="914" height="707" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1590201086223" />
+    <state x="253" y="163" width="914" height="707" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1591059568832" />
     <state x="430" y="240" width="1022" height="742" key="SettingsEditor/0.24.1920.1152@0.24.1920.1152" timestamp="1590112948604" />
     <state x="482" y="247" key="SettingsEditor/67.27.1853.1173@67.27.1853.1173" timestamp="1586145089098" />
-    <state x="341" y="436" key="com.intellij.ide.util.TipDialog" timestamp="1590974167866">
-      <screen x="0" y="24" width="1600" height="1152" />
+    <state x="307" y="329" key="com.intellij.ide.util.TipDialog" timestamp="1591059510767">
+      <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="307" y="329" key="com.intellij.ide.util.TipDialog/0.0.1440.920@0.0.1440.920" timestamp="1590890998738" />
+    <state x="307" y="329" key="com.intellij.ide.util.TipDialog/0.0.1440.920@0.0.1440.920" timestamp="1591059510767" />
     <state x="341" y="436" key="com.intellij.ide.util.TipDialog/0.24.1600.1152@0.24.1600.1152" timestamp="1590974167866" />
     <state x="409" y="436" key="com.intellij.ide.util.TipDialog/0.24.1920.1152@0.24.1920.1152" timestamp="1590198120694" />
     <state x="409" y="440" key="com.intellij.ide.util.TipDialog/0.30.1920.1146@0.30.1920.1146" timestamp="1590028406287" />
