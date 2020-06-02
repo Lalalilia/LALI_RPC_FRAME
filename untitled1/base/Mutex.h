@@ -6,13 +6,13 @@
 #define UNTITLED1_MUTEX_H
 
 
-#include <boost/noncopyable.hpp>
+
 #include <pthread.h>
 #include "CurrentThread.h"
 #include "assert.h"
 
 // save auto
-class Mutex : boost::noncopyable{
+class Mutex {
 public:
 
     Mutex(Mutex *pMutex)

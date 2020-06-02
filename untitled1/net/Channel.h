@@ -15,7 +15,7 @@
 
 class Poller;
 class EventLoop;
-class Channel:boost::noncopyable{
+class Channel{
 public:
     typedef std::function<void()> EventCallback;
     Channel(EventLoop* loop,int fd);

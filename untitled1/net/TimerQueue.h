@@ -6,7 +6,7 @@
 #define UNTITLED1_TIMERQUEUE_H
 
 
-#include <boost/noncopyable.hpp>
+
 #include "Callback.h"
 #include "TImerId.h"
 #include "Timer.h"
@@ -17,7 +17,7 @@
 
 class EventLoop;
 
-class TimerQueue : boost::noncopyable{
+class TimerQueue {
 
 public:
     TimerQueue(EventLoop* loop);

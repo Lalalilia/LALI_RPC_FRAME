@@ -18,13 +18,14 @@
 	在muduo中呢，就用了一个命名空间来访问这个当前线程，这个还是挺有必要的；
 
 */
-#include <boost/noncopyable.hpp>
-#include <pthread.h>
-#include <boost/function.hpp>
 
-class Thread:boost::noncopyable {
+#include <pthread.h>
+#include <memory>
+
+
+class Thread {
 public:
-    typedef boost::function<void()> Threadfunc;
+    typedef std::function<void()> Threadfunc;
 	explicit Thread(const Threadfunc&,const std::string& name = std::string()) ;
     ~Thread() ;
 	 bool started() {};

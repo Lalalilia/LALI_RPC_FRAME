@@ -6,7 +6,6 @@
 #define UNTITLED1_POLLER_H
 
 
-#include <boost/noncopyable.hpp>
 #include <vector>
 #include "EventLoop.h"
 #include <map>
@@ -18,7 +17,7 @@
 struct epoll_event;
 class Channel;
 
-class Poller:boost::noncopyable{
+class Poller{
 
 public:
     typedef std::vector<Channel*> ChannelList;

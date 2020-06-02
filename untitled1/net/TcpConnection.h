@@ -6,7 +6,6 @@
 #define UNTITLED1_TCPCONNECTION_H
 
 
-#include <boost/core/noncopyable.hpp>
 #include <string>
 #include "AddressOps.h"
 #include "Callback.h"
