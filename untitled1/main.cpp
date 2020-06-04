@@ -12,34 +12,22 @@
 #include "net/TcpServer.h"
 
 using namespace std;
-
-void connectioncallback(const TcpConnectionPtr& conn){
-
-    cout<<" new connection name: "<< conn->name() << " from " << conn->peerAddr().toHostPort() <<endl;
-
+EventLoop* pLoop;
+EventLoop* pLoop2;
+void good(){
+    cout<<"good"<<endl;
 }
-
-void messCallback(const TcpConnectionPtr& conn,
-                  Buffer* data,
-                  ssize_t len){
-    std::string echom(data->retrieveAsString());
-
-    cout << " messages from "<<"[" << conn->name() << " - "<<conn->peerAddr().toHostPort()<<"]"
-            <<" len: "<< echom.length() <<" data: "<< echom  <<endl;
-    conn->send(echom);
+void hello(){
+    cout<< "hello" <<endl;
+    pLoop2->queueInLoop(good);
 }
-
 // Using English to annotation
 
 int main(int argc,char* argv[]){
-    AddressOps addr(9981);
-    EventLoop loop;
-    TcpServer server(&loop,addr);
 
-    server.setConnectionCallback(connectioncallback);
-    server.setMessageCallback(messCallback);
-
-    //server.start();
-    //loop.loop();
+    ThreadEventLoop loop1,loop2;
+    pLoop=loop1.startLoop();
+    pLoop2=loop2.startLoop();
+    pLoop->runInLoop(hello);
 }
 

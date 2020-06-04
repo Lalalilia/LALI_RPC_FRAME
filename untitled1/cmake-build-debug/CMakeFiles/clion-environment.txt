@@ -1,4 +1,3 @@
-ToolSet: 3.20 (local)@D:\CodeBlocks\MinGW
-Options: 
+ToolSet: 1.0 (local)Options: 
 
 Options:
