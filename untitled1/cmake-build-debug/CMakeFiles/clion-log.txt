@@ -1,23 +1,4 @@
-D:\Application_Two\CLion-2019.3.5.win\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Lalalilia\Desktop\MyProject\code\untitled1
--- The C compiler identification is GNU 5.1.0
--- The CXX compiler identification is GNU 5.1.0
--- Check for working C compiler: D:/CodeBlocks/MinGW/bin/gcc.exe
--- Check for working C compiler: D:/CodeBlocks/MinGW/bin/gcc.exe -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: D:/CodeBlocks/MinGW/bin/g++.exe
--- Check for working CXX compiler: D:/CodeBlocks/MinGW/bin/g++.exe -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Looking for pthread.h
--- Looking for pthread.h - found
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
--- Found Threads: TRUE  
+/home/lalalilia/Desktop/clion-2019.3.5/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/lalalilia/CLionProjects/untitled1
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/Lalalilia/Desktop/MyProject/code/untitled1/cmake-build-debug
+-- Build files have been written to: /home/lalalilia/CLionProjects/untitled1/cmake-build-debug

@@ -21,7 +21,7 @@
 
 #include <pthread.h>
 #include <memory>
-
+#include <functional>
 
 class Thread {
 public:
