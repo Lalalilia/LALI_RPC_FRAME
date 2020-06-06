@@ -13,6 +13,7 @@
 #include "EventLoopThreadPool.h"
 
 
+// 直接提供给用户使用，用于监听接受新连接，用TcpConnection类来建立连接。
 class EventLoop;
 class TcpServer{
 public:

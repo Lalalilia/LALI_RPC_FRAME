@@ -4,7 +4,7 @@
 
 Eventloop 事件循环；
 
-![ReactorModel](https://gitee.com/lalalilia/NetWordCode/raw/master/untitled1/images/ReactorModel.jpg)
+<img src="https://gitee.com/lalalilia/NetWordCode/raw/master/untitled1/images/ReactorModel.jpg" alt="ReactorModel" style="zoom:50%;" />
 
 
 
@@ -23,3 +23,5 @@ EventLoop 核心工作步骤：
 **3.runInLoop/queueInLoop：**	
 
 走后门的runInLoop，在EventLoop中，领导人EventLoop专门设置了一个doPendingFunctor()环节，来额外接受不在poller记录本里面的事件，但还存在一个pendingFunctors_，专门记录走后门名单，领导人EventLoop平常都会阻塞在poll()函数中但没事做，如果这是有人走后门（queueInLoop）了，就会weakup()直接通知到poll()函数中，让EventLoop可以跳出poll()的阻塞，然后来doPendingFunctor()。
+
+<img src="https://gitee.com/lalalilia/NetWordCode/raw/master/untitled1/images/EventLoop工作步骤.jpg" alt="EventLoop工作步骤" style="zoom:50%;" />
