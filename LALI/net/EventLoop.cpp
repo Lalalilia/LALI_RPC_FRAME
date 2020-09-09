@@ -14,6 +14,7 @@
 #include "TimerQueue.h"
 #include <sys/eventfd.h>
 #include "signal.h"
+#include <unistd.h>
 
 __thread EventLoop* t_loopInThisThread = nullptr;
 

@@ -7,12 +7,11 @@
 
 #include <deque>
 #include "Condition.h"
-#include <boost/noncopyable.hpp>
 #include <deque>
 #include "Mutex.h"
 
 template<typename T>
-class BlockingQueue:boost::noncopyable{
+class BlockingQueue{
 public:
     BlockingQueue()
             : mutex_(nullptr),

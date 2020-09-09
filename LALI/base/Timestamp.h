@@ -6,13 +6,12 @@
 #define UNTITLED1_TIMESTAMP_H
 
 #include <string>
-#include <boost/operators.hpp>
+
 using namespace std;
 
 
 using namespace std;
-class Timestamp:public boost::less_than_comparable<Timestamp>,
-                public boost::equality_comparable<Timestamp>
+class Timestamp
 {
 public:
 

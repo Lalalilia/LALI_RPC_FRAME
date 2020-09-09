@@ -6,13 +6,12 @@
 #define UNTITLED1_CONDITION_H
 /// 一个条件变量的类，为了更好的实现线程同步；
 
-#include <boost/noncopyable.hpp>
 #include <pthread.h>
 #include "Mutex.h"
 #include <cerrno>
 
 
-class Condition : boost::noncopyable{
+class Condition{
 public:
     explicit Condition(Mutex& mutex)
     :mutex_(mutex)

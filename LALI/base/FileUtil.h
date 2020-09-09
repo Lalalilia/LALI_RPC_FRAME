@@ -6,9 +6,9 @@
 #define UNTITLED1_FILEUTIL_H
 
 #include <cstdio>
-#include "boost/noncopyable.hpp"
 
-class AppendFile:boost::noncopyable{
+
+class AppendFile{
 public:
     explicit AppendFile(const char* filename);
     ~AppendFile();

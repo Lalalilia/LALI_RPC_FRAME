@@ -7,11 +7,10 @@
 
 /// 闭锁类，为实现线程同步；
 
-#include <boost/noncopyable.hpp>
 #include "Mutex.h"
 #include "Condition.h"
 
-class CountDownLatch : boost::noncopyable{
+class CountDownLatch {
 
 public:
     CountDownLatch(int count);

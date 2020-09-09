@@ -5,7 +5,7 @@
 #include "Channel.h"
 #include "TcpConnection.h"
 #include "SocketOps.h"
-
+#include <unistd.h>
 
 TcpConnection::TcpConnection(EventLoop *loop,
         const std::string& name,

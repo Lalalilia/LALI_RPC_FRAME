@@ -48,7 +48,7 @@ void TcpServer::newConnection(int socketfd, const AddressOps & peerAddr) {
     conn->setConnectionCallback(connectionCallback_);
     conn->setMessageCallback(messageCallback_);
     conn->setCloseCallback(std::bind(&TcpServer::destroyConnection,this, std::placeholders::_1));
-    ioLoop->runInLoop(std::bind(&TcpConnection::connectEstablished,conn));
+    conn->connectEstablished();
 }
 
 void TcpServer::destroyConnection(const TcpConnectionPtr& conn){

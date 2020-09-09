@@ -5,12 +5,11 @@
 #ifndef UNTITLED1_SINGLETON_H
 #define UNTITLED1_SINGLETON_H
 
-#include <boost/noncopyable.hpp>
 #include <pthread.h>
 #include <stdlib.h>
 
 template<typename T>
-class Singleton : boost::noncopyable{
+class Singleton {
 
 public:
     static T& instance(){

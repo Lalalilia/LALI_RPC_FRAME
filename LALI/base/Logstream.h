@@ -6,7 +6,6 @@
 #define UNTITLED1_LOGSTREAM_H
 
 
-#include <boost/noncopyable.hpp>
 #include <string.h>
 #include <string>
 
@@ -15,7 +14,7 @@ const int kLargerBuffer = 4000*1000;
 
 
 template<int SIZE>
-class FixedBuffer:boost::noncopyable{
+class FixedBuffer{
 public:
     FixedBuffer()
             :cur_(data_){
@@ -53,7 +52,7 @@ private:
 };
 
 
-class Logstream:boost::noncopyable {
+class Logstream {
 
 public:
     typedef FixedBuffer<kSmallBuffer> Buffer;

@@ -6,6 +6,8 @@
 #include <memory>
 #include <string>
 #include "FileUtil.h"
+#include "unistd.h"
+
 
 
 LogFile::LogFile(const char* filename,

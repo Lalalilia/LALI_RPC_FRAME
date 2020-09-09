@@ -6,13 +6,12 @@
 #define UNTITLED1_THREADLOCALSINGLETON_H
 
 
-#include <boost/noncopyable.hpp>
 #include <pthread.h>
 #include <stdio.h>
 #include <iostream>
 
 template <typename T>
-class ThreadLocalSingleton : boost::noncopyable{
+class ThreadLocalSingleton {
 
 public:
 

@@ -12,7 +12,7 @@
 #include <deque>
 #include <vector>
 
-class ThreadPool:boost::noncopyable{
+class ThreadPool{
 public:
     ThreadPool(const std::string name = std::string());
     ~ThreadPool();
