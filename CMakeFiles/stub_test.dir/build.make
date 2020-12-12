@@ -945,6 +945,102 @@ CMakeFiles/stub_test.dir/zrpc/client/RpcClient.cpp.o.provides: CMakeFiles/stub_t
 CMakeFiles/stub_test.dir/zrpc/client/RpcClient.cpp.o.provides.build: CMakeFiles/stub_test.dir/zrpc/client/RpcClient.cpp.o
 
 
+CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.o: CMakeFiles/stub_test.dir/flags.make
+CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.o: zrpc/server/BaseServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lalalilia/LALI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.o -c /home/lalalilia/LALI/zrpc/server/BaseServer.cpp
+
+CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lalalilia/LALI/zrpc/server/BaseServer.cpp > CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.i
+
+CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lalalilia/LALI/zrpc/server/BaseServer.cpp -o CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.s
+
+CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.o.requires:
+
+.PHONY : CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.o.requires
+
+CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.o.provides: CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/stub_test.dir/build.make CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.o.provides.build
+.PHONY : CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.o.provides
+
+CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.o.provides.build: CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.o
+
+
+CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.o: CMakeFiles/stub_test.dir/flags.make
+CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.o: zrpc/server/Procedure.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lalalilia/LALI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.o -c /home/lalalilia/LALI/zrpc/server/Procedure.cpp
+
+CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lalalilia/LALI/zrpc/server/Procedure.cpp > CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.i
+
+CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lalalilia/LALI/zrpc/server/Procedure.cpp -o CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.s
+
+CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.o.requires:
+
+.PHONY : CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.o.requires
+
+CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.o.provides: CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.o.requires
+	$(MAKE) -f CMakeFiles/stub_test.dir/build.make CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.o.provides.build
+.PHONY : CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.o.provides
+
+CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.o.provides.build: CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.o
+
+
+CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.o: CMakeFiles/stub_test.dir/flags.make
+CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.o: zrpc/server/RpcService.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lalalilia/LALI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.o -c /home/lalalilia/LALI/zrpc/server/RpcService.cpp
+
+CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lalalilia/LALI/zrpc/server/RpcService.cpp > CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.i
+
+CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lalalilia/LALI/zrpc/server/RpcService.cpp -o CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.s
+
+CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.o.requires:
+
+.PHONY : CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.o.requires
+
+CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.o.provides: CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.o.requires
+	$(MAKE) -f CMakeFiles/stub_test.dir/build.make CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.o.provides.build
+.PHONY : CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.o.provides
+
+CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.o.provides.build: CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.o
+
+
+CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.o: CMakeFiles/stub_test.dir/flags.make
+CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.o: zrpc/server/Rpcserver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lalalilia/LALI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.o -c /home/lalalilia/LALI/zrpc/server/Rpcserver.cpp
+
+CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lalalilia/LALI/zrpc/server/Rpcserver.cpp > CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.i
+
+CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lalalilia/LALI/zrpc/server/Rpcserver.cpp -o CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.s
+
+CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.o.requires:
+
+.PHONY : CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.o.requires
+
+CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.o.provides: CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.o.requires
+	$(MAKE) -f CMakeFiles/stub_test.dir/build.make CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.o.provides.build
+.PHONY : CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.o.provides
+
+CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.o.provides.build: CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.o
+
+
 # Object files for target stub_test
 stub_test_OBJECTS = \
 "CMakeFiles/stub_test.dir/test/stub_test.cpp.o" \
@@ -983,7 +1079,11 @@ stub_test_OBJECTS = \
 "CMakeFiles/stub_test.dir/zrpc/stub/ClientStub.cpp.o" \
 "CMakeFiles/stub_test.dir/zrpc/stub/ServiceStub.cpp.o" \
 "CMakeFiles/stub_test.dir/zrpc/stub/StubGenerator.cpp.o" \
-"CMakeFiles/stub_test.dir/zrpc/client/RpcClient.cpp.o"
+"CMakeFiles/stub_test.dir/zrpc/client/RpcClient.cpp.o" \
+"CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.o" \
+"CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.o" \
+"CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.o" \
+"CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.o"
 
 # External object files for target stub_test
 stub_test_EXTERNAL_OBJECTS =
@@ -1025,9 +1125,13 @@ stub_test: CMakeFiles/stub_test.dir/zrpc/stub/ClientStub.cpp.o
 stub_test: CMakeFiles/stub_test.dir/zrpc/stub/ServiceStub.cpp.o
 stub_test: CMakeFiles/stub_test.dir/zrpc/stub/StubGenerator.cpp.o
 stub_test: CMakeFiles/stub_test.dir/zrpc/client/RpcClient.cpp.o
+stub_test: CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.o
+stub_test: CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.o
+stub_test: CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.o
+stub_test: CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.o
 stub_test: CMakeFiles/stub_test.dir/build.make
 stub_test: CMakeFiles/stub_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lalalilia/LALI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Linking CXX executable stub_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lalalilia/LALI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Linking CXX executable stub_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/stub_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1072,6 +1176,10 @@ CMakeFiles/stub_test.dir/requires: CMakeFiles/stub_test.dir/zrpc/stub/ClientStub
 CMakeFiles/stub_test.dir/requires: CMakeFiles/stub_test.dir/zrpc/stub/ServiceStub.cpp.o.requires
 CMakeFiles/stub_test.dir/requires: CMakeFiles/stub_test.dir/zrpc/stub/StubGenerator.cpp.o.requires
 CMakeFiles/stub_test.dir/requires: CMakeFiles/stub_test.dir/zrpc/client/RpcClient.cpp.o.requires
+CMakeFiles/stub_test.dir/requires: CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.o.requires
+CMakeFiles/stub_test.dir/requires: CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.o.requires
+CMakeFiles/stub_test.dir/requires: CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.o.requires
+CMakeFiles/stub_test.dir/requires: CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.o.requires
 
 .PHONY : CMakeFiles/stub_test.dir/requires
 

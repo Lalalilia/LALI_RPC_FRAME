@@ -11,7 +11,7 @@ aux_source_directory(./net DIR_SRCS)
 aux_source_directory(./jackson DIR_SRCS)
 aux_source_directory(./zrpc/stub DIR_SRCS)
 aux_source_directory(./zrpc/client DIR_SRCS)
-aux_source_directory(./server DIR_SRCS)
+aux_source_directory(./zrpc/server DIR_SRCS)
 
 add_executable(
         stub_test

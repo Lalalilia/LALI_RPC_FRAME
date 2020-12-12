@@ -319,6 +319,90 @@ CMakeFiles/stub_test.dir/zrpc/client/RpcClient.cpp.o
  net/TcpConnection.h
  zrpc/client/RpcClient.h
  zrpc/util.h
+CMakeFiles/stub_test.dir/zrpc/server/BaseServer.cpp.o
+ /home/lalalilia/LALI/zrpc/server/BaseServer.cpp
+ base/CurrentThread.h
+ base/Logging.h
+ base/Logstream.h
+ base/Mutex.h
+ base/Timestamp.h
+ jackson/Document.h
+ jackson/Exception.h
+ jackson/Reader.h
+ jackson/StringReadStream.h
+ jackson/StringWriteStream.h
+ jackson/Value.h
+ jackson/Writer.h
+ jackson/noncopyable.h
+ net/Acceptor.h
+ net/AddressOps.h
+ net/Buffer.h
+ net/Callback.h
+ net/Channel.h
+ net/EventLoop.h
+ net/EventLoopThreadPool.h
+ net/Socket.h
+ net/SocketOps.h
+ net/TImerId.h
+ net/TcpConnection.h
+ net/TcpServer.h
+ zrpc/server/BaseServer.h
+ zrpc/server/Procedure.h
+ zrpc/server/RpcService.h
+ zrpc/server/Rpcserver.h
+ zrpc/util.h
+CMakeFiles/stub_test.dir/zrpc/server/Procedure.cpp.o
+ /home/lalalilia/LALI/zrpc/server/Procedure.cpp
+ jackson/Document.h
+ jackson/Exception.h
+ jackson/Reader.h
+ jackson/StringReadStream.h
+ jackson/Value.h
+ jackson/noncopyable.h
+ zrpc/server/Procedure.h
+ zrpc/util.h
+CMakeFiles/stub_test.dir/zrpc/server/RpcService.cpp.o
+ /home/lalalilia/LALI/zrpc/server/RpcService.cpp
+ jackson/Document.h
+ jackson/Exception.h
+ jackson/Reader.h
+ jackson/StringReadStream.h
+ jackson/Value.h
+ jackson/noncopyable.h
+ zrpc/server/Procedure.h
+ zrpc/server/RpcService.h
+ zrpc/util.h
+CMakeFiles/stub_test.dir/zrpc/server/Rpcserver.cpp.o
+ /home/lalalilia/LALI/zrpc/server/Rpcserver.cpp
+ base/CurrentThread.h
+ base/Exception.h
+ base/Logging.h
+ base/Logstream.h
+ base/Mutex.h
+ base/Timestamp.h
+ jackson/Document.h
+ jackson/Exception.h
+ jackson/Reader.h
+ jackson/StringReadStream.h
+ jackson/Value.h
+ jackson/noncopyable.h
+ net/Acceptor.h
+ net/AddressOps.h
+ net/Buffer.h
+ net/Callback.h
+ net/Channel.h
+ net/EventLoop.h
+ net/EventLoopThreadPool.h
+ net/Socket.h
+ net/SocketOps.h
+ net/TImerId.h
+ net/TcpConnection.h
+ net/TcpServer.h
+ zrpc/server/BaseServer.h
+ zrpc/server/Procedure.h
+ zrpc/server/RpcService.h
+ zrpc/server/Rpcserver.h
+ zrpc/util.h
 CMakeFiles/stub_test.dir/zrpc/stub/ClientStub.cpp.o
  /home/lalalilia/LALI/zrpc/stub/ClientStub.cpp
  base/CurrentThread.h

@@ -36,6 +36,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/RpcServer_test.dir/zrpc/stub/ServiceStub.cpp.o"
   "CMakeFiles/RpcServer_test.dir/zrpc/stub/StubGenerator.cpp.o"
   "CMakeFiles/RpcServer_test.dir/zrpc/client/RpcClient.cpp.o"
+  "CMakeFiles/RpcServer_test.dir/zrpc/server/BaseServer.cpp.o"
+  "CMakeFiles/RpcServer_test.dir/zrpc/server/Procedure.cpp.o"
+  "CMakeFiles/RpcServer_test.dir/zrpc/server/RpcService.cpp.o"
+  "CMakeFiles/RpcServer_test.dir/zrpc/server/Rpcserver.cpp.o"
   "RpcServer_test.pdb"
   "RpcServer_test"
 )

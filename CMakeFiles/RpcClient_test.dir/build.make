@@ -945,6 +945,102 @@ CMakeFiles/RpcClient_test.dir/zrpc/client/RpcClient.cpp.o.provides: CMakeFiles/R
 CMakeFiles/RpcClient_test.dir/zrpc/client/RpcClient.cpp.o.provides.build: CMakeFiles/RpcClient_test.dir/zrpc/client/RpcClient.cpp.o
 
 
+CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.o: CMakeFiles/RpcClient_test.dir/flags.make
+CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.o: zrpc/server/BaseServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lalalilia/LALI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.o -c /home/lalalilia/LALI/zrpc/server/BaseServer.cpp
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lalalilia/LALI/zrpc/server/BaseServer.cpp > CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.i
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lalalilia/LALI/zrpc/server/BaseServer.cpp -o CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.s
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.o.requires:
+
+.PHONY : CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.o.requires
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.o.provides: CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/RpcClient_test.dir/build.make CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.o.provides.build
+.PHONY : CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.o.provides
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.o.provides.build: CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.o
+
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.o: CMakeFiles/RpcClient_test.dir/flags.make
+CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.o: zrpc/server/Procedure.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lalalilia/LALI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.o -c /home/lalalilia/LALI/zrpc/server/Procedure.cpp
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lalalilia/LALI/zrpc/server/Procedure.cpp > CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.i
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lalalilia/LALI/zrpc/server/Procedure.cpp -o CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.s
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.o.requires:
+
+.PHONY : CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.o.requires
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.o.provides: CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.o.requires
+	$(MAKE) -f CMakeFiles/RpcClient_test.dir/build.make CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.o.provides.build
+.PHONY : CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.o.provides
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.o.provides.build: CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.o
+
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.o: CMakeFiles/RpcClient_test.dir/flags.make
+CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.o: zrpc/server/RpcService.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lalalilia/LALI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.o -c /home/lalalilia/LALI/zrpc/server/RpcService.cpp
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lalalilia/LALI/zrpc/server/RpcService.cpp > CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.i
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lalalilia/LALI/zrpc/server/RpcService.cpp -o CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.s
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.o.requires:
+
+.PHONY : CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.o.requires
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.o.provides: CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.o.requires
+	$(MAKE) -f CMakeFiles/RpcClient_test.dir/build.make CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.o.provides.build
+.PHONY : CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.o.provides
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.o.provides.build: CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.o
+
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.o: CMakeFiles/RpcClient_test.dir/flags.make
+CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.o: zrpc/server/Rpcserver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lalalilia/LALI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.o -c /home/lalalilia/LALI/zrpc/server/Rpcserver.cpp
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lalalilia/LALI/zrpc/server/Rpcserver.cpp > CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.i
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lalalilia/LALI/zrpc/server/Rpcserver.cpp -o CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.s
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.o.requires:
+
+.PHONY : CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.o.requires
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.o.provides: CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.o.requires
+	$(MAKE) -f CMakeFiles/RpcClient_test.dir/build.make CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.o.provides.build
+.PHONY : CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.o.provides
+
+CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.o.provides.build: CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.o
+
+
 # Object files for target RpcClient_test
 RpcClient_test_OBJECTS = \
 "CMakeFiles/RpcClient_test.dir/test/RpcClient_test.cpp.o" \
@@ -983,7 +1079,11 @@ RpcClient_test_OBJECTS = \
 "CMakeFiles/RpcClient_test.dir/zrpc/stub/ClientStub.cpp.o" \
 "CMakeFiles/RpcClient_test.dir/zrpc/stub/ServiceStub.cpp.o" \
 "CMakeFiles/RpcClient_test.dir/zrpc/stub/StubGenerator.cpp.o" \
-"CMakeFiles/RpcClient_test.dir/zrpc/client/RpcClient.cpp.o"
+"CMakeFiles/RpcClient_test.dir/zrpc/client/RpcClient.cpp.o" \
+"CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.o" \
+"CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.o" \
+"CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.o" \
+"CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.o"
 
 # External object files for target RpcClient_test
 RpcClient_test_EXTERNAL_OBJECTS =
@@ -1025,9 +1125,13 @@ RpcClient_test: CMakeFiles/RpcClient_test.dir/zrpc/stub/ClientStub.cpp.o
 RpcClient_test: CMakeFiles/RpcClient_test.dir/zrpc/stub/ServiceStub.cpp.o
 RpcClient_test: CMakeFiles/RpcClient_test.dir/zrpc/stub/StubGenerator.cpp.o
 RpcClient_test: CMakeFiles/RpcClient_test.dir/zrpc/client/RpcClient.cpp.o
+RpcClient_test: CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.o
+RpcClient_test: CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.o
+RpcClient_test: CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.o
+RpcClient_test: CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.o
 RpcClient_test: CMakeFiles/RpcClient_test.dir/build.make
 RpcClient_test: CMakeFiles/RpcClient_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lalalilia/LALI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Linking CXX executable RpcClient_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lalalilia/LALI/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Linking CXX executable RpcClient_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RpcClient_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1072,6 +1176,10 @@ CMakeFiles/RpcClient_test.dir/requires: CMakeFiles/RpcClient_test.dir/zrpc/stub/
 CMakeFiles/RpcClient_test.dir/requires: CMakeFiles/RpcClient_test.dir/zrpc/stub/ServiceStub.cpp.o.requires
 CMakeFiles/RpcClient_test.dir/requires: CMakeFiles/RpcClient_test.dir/zrpc/stub/StubGenerator.cpp.o.requires
 CMakeFiles/RpcClient_test.dir/requires: CMakeFiles/RpcClient_test.dir/zrpc/client/RpcClient.cpp.o.requires
+CMakeFiles/RpcClient_test.dir/requires: CMakeFiles/RpcClient_test.dir/zrpc/server/BaseServer.cpp.o.requires
+CMakeFiles/RpcClient_test.dir/requires: CMakeFiles/RpcClient_test.dir/zrpc/server/Procedure.cpp.o.requires
+CMakeFiles/RpcClient_test.dir/requires: CMakeFiles/RpcClient_test.dir/zrpc/server/RpcService.cpp.o.requires
+CMakeFiles/RpcClient_test.dir/requires: CMakeFiles/RpcClient_test.dir/zrpc/server/Rpcserver.cpp.o.requires
 
 .PHONY : CMakeFiles/RpcClient_test.dir/requires
 
