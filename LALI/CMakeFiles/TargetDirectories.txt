@@ -1,0 +1,3 @@
+/home/lalalilia/LALI/CMakeFiles/rebuild_cache.dir
+/home/lalalilia/LALI/CMakeFiles/ziliProject.dir
+/home/lalalilia/LALI/CMakeFiles/edit_cache.dir
