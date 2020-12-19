@@ -63,7 +63,7 @@ private:
     const int fd_;
     int events_;
     int currentEvents_;
-    int index_; //???
+    int index_; 
 
     EventCallback readCallback_;
     EventCallback writeCallback_;

@@ -34,9 +34,7 @@ EventLoop* ThreadEventLoop::startLoop() {
         }
         loop=loop_;
     }
-
     return loop;
-
 }
 
 void ThreadEventLoop::threadFunc() {

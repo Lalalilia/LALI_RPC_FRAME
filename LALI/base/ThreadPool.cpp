@@ -20,7 +20,6 @@ ThreadPool::~ThreadPool() {
 }
 
 void ThreadPool::start(int numsThreads){
-
     running_ = true;
     threads_.reserve(numsThreads);
     for(int i=0;i<numsThreads;i++){

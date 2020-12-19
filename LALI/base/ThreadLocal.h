@@ -6,12 +6,13 @@
 #define UNTITLED1_THREADLOCAL_H
 
 
-// 写一个线程存储类。对于线程存储，目的就是让一个全局变量能够给每个线程独立拥有；
+// 对于线程存储，目的就是让一个全局变量能够给每个线程独立拥有；
 
 #include <pthread.h>
 #include "iostream"
 
-/// 声明成一个模板类是因为数据会有很多种类型；
+
+// 声明成一个模板类满足数据多种类型，可以支持自实现类；
 template<typename T>
 class ThreadLocal{
 public:

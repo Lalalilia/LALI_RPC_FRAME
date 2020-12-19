@@ -118,8 +118,6 @@ void EventLoop::quit(){
     quit_ = true;
 }
 
-/// 更新通道应该什么时候使用呢？
-
 void EventLoop::updateChannel(Channel* channel){
     assert(channel->ownerLoop() == this);
     assertInLoopThread();

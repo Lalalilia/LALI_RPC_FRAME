@@ -36,7 +36,7 @@ Poller::~Poller(){
     ::close(epollfd_);
 }
 
-// 把活跃事IO件写入pollfdList_中；
+// 把活跃IO事件写入pollfdList_中；
 Timestamp Poller::poll(int timeoutMs,ChannelList* activeChannels){
 
     int numEvents=::epoll_wait(epollfd_,
