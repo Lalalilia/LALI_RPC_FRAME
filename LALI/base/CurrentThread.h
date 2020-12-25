@@ -5,7 +5,7 @@
 #ifndef UNTITLED1_CURRENTTHREAD_H
 #define UNTITLED1_CURRENTTHREAD_H
 
-
+// 用于标定线程 id ，使用 tid
 namespace CurrentThread{
     extern __thread  int t_cachedTid ;
     extern __thread  char t_stringTid[32];
