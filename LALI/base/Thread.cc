@@ -13,12 +13,14 @@
 using namespace std;
 
 namespace CurrentThread {
+    // 初始化工作
     __thread int t_cachedTid = 0;
     __thread char t_stringTid[32];
     __thread const char *t_threadName = "unknown";
 }
 
 void CurrentThread::CacheTid() {
+    // 获取线程 tid
     t_cachedTid = static_cast<pid_t>(::syscall(SYS_gettid));
     snprintf(t_stringTid, sizeof t_stringTid, "%5d ", t_cachedTid);
 }
@@ -36,7 +38,6 @@ namespace detail {
             cout << "oneThreadhasbeenCreate" << endl;
             CurrentThread::t_threadName = "main";
             CurrentThread::CacheTid();
-            pthread_atfork(NULL, NULL, &afterFork);
         }
     };
 
