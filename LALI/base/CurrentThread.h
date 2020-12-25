@@ -1,5 +1,5 @@
 //
-// Created by lalalilia on 4/7/20.
+//Created by lalalilia
 //
 
 #ifndef UNTITLED1_CURRENTTHREAD_H

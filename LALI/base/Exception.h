@@ -1,5 +1,5 @@
 //
-// Created by lalalilia 
+//Created by lalalilia
 //
 #ifndef UNTITLED1_EXCEPTION_H
 #define UNTITLED1_EXCEPTION_H

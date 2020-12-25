@@ -1,5 +1,5 @@
 //
-// Created by lalalilia on 5/10/20.
+//Created by lalalilia
 //
 
 #include "Channel.h"

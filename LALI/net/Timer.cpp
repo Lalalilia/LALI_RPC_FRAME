@@ -1,5 +1,5 @@
 //
-// Created by lalalilia on 4/30/20.
+//Created by lalalilia
 //
 
 #include "Timer.h"

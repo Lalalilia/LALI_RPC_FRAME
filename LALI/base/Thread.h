@@ -1,4 +1,5 @@
 #ifndef _thread_h
+//Created by lalalilia
 #define _thread_h
 /*
 	首先想想写一个线程类需要干什么好吧；
