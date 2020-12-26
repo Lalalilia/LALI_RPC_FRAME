@@ -6,7 +6,7 @@
 #include <random>
 #include <iostream>
 
-#include <test/ArithmeticClientStub.h>
+#include <test/RpcTestClientStub.h>
 #include <net/EventLoop.h>
 
 
@@ -14,7 +14,7 @@ std::random_device rd;  //Will be used to obtain a seed for the random number en
 std::mt19937 gen(rd());
 std::uniform_int_distribution dis(0, 10);
 
-void run(ArithmeticClientStub& client)
+void run(RpcTestClientStub& client)
 {
     double lhs = dis(gen);
     double rhs = dis(gen);
@@ -39,7 +39,7 @@ int main()
 {
     EventLoop loop;
     AddressOps addr(9877);
-    ArithmeticClientStub client(&loop, addr);
+    RpcTestClientStub client(&loop, addr);
 
     client.setConnectionCallback([&](const TcpConnectionPtr& conn) {
         if (conn->disconnected()) {

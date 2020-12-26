@@ -2,15 +2,15 @@
 // Created by lalalilia
 //
 
-#include <test/ArithmeticServiceStub.h>
+#include <test/RpcTestServiceStub.h>
 #include <base/ThreadPool.h>
 
-class ArithmeticService: public ArithmeticServiceStub<ArithmeticService>
+class RpcTestService: public RpcTestServiceStub<RpcTestService>
 {
 public:
     explicit
-    ArithmeticService(RpcServer& server):
-            ArithmeticServiceStub(server)
+    RpcTestService(RpcServer& server):
+            RpcTestServiceStub(server)
     {
         pool_.start(0);
     }
@@ -40,7 +40,7 @@ int main()
     AddressOps addr(9877);
 
     RpcServer rpcServer(&loop, addr);
-    ArithmeticService service(rpcServer);
+    RpcTestService service(rpcServer);
 
     rpcServer.start();
     loop.loop();
