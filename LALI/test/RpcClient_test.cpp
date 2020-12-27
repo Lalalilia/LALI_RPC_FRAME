@@ -10,15 +10,16 @@
 #include <net/EventLoop.h>
 
 
-std::random_device rd;  //Will be used to obtain a seed for the random number engine
+std::random_device rd; 
 std::mt19937 gen(rd());
 std::uniform_int_distribution dis(0, 10);
+
 
 void run(RpcTestClientStub& client)
 {
     double lhs = dis(gen);
     double rhs = dis(gen);
-
+    // 用 lambda 表达式作为消息回调函数
     client.Add(lhs, rhs, [=](json::Value response, bool isError, bool timeout) {
         if (!isError) {
             std::cout << lhs << "/" << rhs << "="
@@ -46,6 +47,7 @@ int main()
             loop.quit();
         }
         else {
+            // 每0.5秒进行一次 rpc 请求
             loop.runRepeat([&] {
                 run(client);
             },0.5);

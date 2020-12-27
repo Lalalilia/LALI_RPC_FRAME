@@ -45,6 +45,8 @@
 | net/Buffer.h&.cc                                             | buffer 缓存类用于接收信息及发送信息                          |
 | net/Socket.h&.cc                                             | 将 socket 套接字封装成类管理                                 |
 | net/Tcpserver.h&.cc                                          | 管理 tcp 连接和断开，主线程只负责接受连接，将连接分发给其他线程 |
+| net/Connector.h&.cc                                          | 用于 TcpClient，实现 tcp 主动连接，重连尝试                  |
+| net/TcpClient.h&.cc                                          | 管理 tcp 的主动连接，一个 tcpclient 只有一个线程             |
 | net/Acceptor.h&.cc                                           | 用于接受 TCP 连接                                            |
 | net/Tcpconnectino.h&.cc                                      | 单个连接的处理类，处理连接之间的通信及断开，优雅断开连接     |
 | net/EventLoopThreadPool.h&.cc                                | 线程池，one EventLoop per thread                             |
