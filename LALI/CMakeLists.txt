@@ -29,8 +29,14 @@ add_executable(
         test/RpcClient_test.cpp
         ${DIR_SRCS}
 )
+add_executable(
+        Http_test
+        test/http_test.cpp
+        ${DIR_SRCS}
+)
 
 find_package(Threads REQUIRED)
 target_link_libraries (stub_test Threads::Threads)
 target_link_libraries (RpcServer_test Threads::Threads)
 target_link_libraries (RpcClient_test Threads::Threads)
+target_link_libraries (Http_test Threads::Threads)

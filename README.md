@@ -49,6 +49,11 @@
 | net/Tcpconnectino.h&.cc                                      | 单个连接的处理类，处理连接之间的通信及断开，优雅断开连接     |
 | net/EventLoopThreadPool.h&.cc                                | 线程池，one EventLoop per thread                             |
 | net/HttpServer.h&.cc                                         | http 服务实现，处理 http 协议                                |
+| zrpc/server/*                                                | 解析 json 字段，将返回消息包装成 json 字段，调用 TcpServer 进行网络连接及消息传输服务 |
+| zrpc/client/*                                                | 调用了 TcpClient ，对服务端发起连接，能够解析服务端的回复 json 字段获取消息，向服务器发送 json 形式的 rpc 请求 |
+| zrpc/stub/*                                                  | 能够解析 json 文件实现 RPC Stub 存根文件的自动生成           |
+| jackson/*                                                    | 用于实现 json 库的解析                                       |
+| test/*                                                       | 测试文件                                                     |
 
 
 
@@ -63,7 +68,7 @@ cmake .
 make
 ```
 
-安装完毕后，CmakeLists 中已经写好并构建了 3 个可执行文件，
+安装完毕后，CmakeLists 中已经写好并构建了 4 个可执行文件，
 
 ①stub_test ：输入一个 json 文件会自动生成服务端与客户端的存根头文件
 
@@ -71,9 +76,35 @@ make
 
 ③RpcClient_test ：测试的RPC 客户端，运行后连接服务端进行 RPC 请求
 
-成功运行后使用抓包软件会看到 json 形式的 RPC 请求
+④http_test ：一个简单的 http 服务，运行后浏览器键入 `http://localhost:8001` 可看到网页界面，用于对服务器进行压力测试
 
+成功运行后使用抓包软件 wireshark 会看到 json 形式的 RPC 请求
 
+test 文件夹中含 test.json 文件内容如下：
 
+```json
+{
+  "name": "RpcTest",
+  "rpc": [
+    {
+      "name": "Add",
+      "params": {"lhs": 1.0, "rhs": 1.0},
+      "returns": 2.0
+    },
+    {
+      "name": "Sub",
+      "params": {"lhs": 1.0, "rhs": 1.0},
+      "returns": 0.0
+    }
+  ]
+}
+```
 
+在文件目录下使用 stub_test ，输入
+
+```shell
+./stub_test -i ./test/test.json -o
+```
+
+即可生成 `RpcTestClientStub.h` 和 `RpcTestServiceStub.h` 两个头文件，再编译 `test/RpcClientTest.cpp` 及 `test/RpcServiceStub.cpp`  即可生成可执行文件，在这两个文件中包含了 上述两个头文件。
 
