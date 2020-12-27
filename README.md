@@ -1,14 +1,24 @@
 # LALI RPC FRAME
 
-- 异步多线程的 RPC 框架。采用 json 格式的序列化 / 反序列化方案，程序自动生成 service/client stub 程序，用户 include 相应 stub 即可接收/发起 RPC ；服务端支持多线程 RPC, 即用户可以将 RPC 请求交给另一个线程 (或者线程池) 去执行，这样 IO 线程就可以立刻开始等待下一个请求。
+1. **基本介绍**
+
+- 异步多线程的 RPC 框架。采用 json 格式的序列化 / 反序列化方案，程序自动生成 service/client stub 程序，用户 include 相应 stub 即可接收/发起 RPC ；客户端支持异步 RPC；服务端支持多线程 RPC, 即用户可以将 RPC 请求交给另一个线程 (或者线程池) 去执行，这样 IO 线程就可以立刻开始等待下一个请求。
 - 基于 NON-Blocking IO + IO multiplexing（epoll 水平触发） 的 Reactor 事件驱动模型的网络服务器。使用多线程充分利用多核 CPU，并使用了线程池避免了频繁创建销毁线程的开销，主线程只 accept 请求，以 Round Robin 的方式分发给其它 IO 线程，采用 eventfd 实现线程异步唤醒
+
+2. **RPC **
+
+- 通过![[公式]](https://www.zhihu.com/equation?tex=service.method) 唯一定义一个 procedure. 一个 TCP 端口可以对外提供多个 service, 一个 service 可以有多个 method；
+- 利用 stub 存根文件解析器直接解析 json 文件，自动生成存根程序；
+- 存根文件 ServerStub ：可以将 json 请求消息里面的参数提取出来转化成普通的函数调用，然后把函数的返回值包装成一个 json 消息发出去；
+- 存根文件 ClientStub ：可以将函数的参数包装到 json 请求消息中，通过网络库发出，然后把收到的 json 回复消息的返回值、错误信息提取出来给用户回调；
+
+3. **设计细节**
+
 - 异步日志系统。使用双缓冲区及批处理方式
 - 使用 timerfd 将定时器当作 IO 事件处理，并使用红黑树进行定时器的关闭超时请求
 - 使用智能指针的 RAII 机制，减少了内存泄漏的可能
 - 支持服务器的优雅关闭
-- 客户端支持异步 RPC, 也可以通过线程同步达到同步 RPC 的效果.
-- 服务端支持多线程 RPC, 即用户可以将 RPC 请求交给另一个线程 (或者线程池) 去执行，这样 IO 线程就可以立刻开始等待下一个请求.
-- 通过![[公式]](https://www.zhihu.com/equation?tex=service.method) 唯一定义一个 procedure. 一个 TCP 端口可以对外提供多个 service, 一个 service 可以有多个 method.
+- 具有简单 http 服务可提供 url 访问地址实现简单的服务器压力测试
 
 
 
@@ -109,4 +119,6 @@ test 文件夹中含 test.json 文件内容如下：
 ```
 
 即可生成 `RpcTestClientStub.h` 和 `RpcTestServiceStub.h` 两个头文件，再编译 `test/RpcClientTest.cpp` 及 `test/RpcServiceStub.cpp`  即可生成可执行文件，在这两个文件中包含了 上述两个头文件。
+
+
 
