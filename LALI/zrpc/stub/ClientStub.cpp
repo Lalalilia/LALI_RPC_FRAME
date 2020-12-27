@@ -27,7 +27,7 @@ std::string clientStubTemplate(
 class [stubClassName]
 {
 public:
-    [stubClassName](EventLoop* loop, const InetAddress& serverAddress):
+    [stubClassName](EventLoop* loop, const AddressOps& serverAddress):
             client_(loop, serverAddress)
     {
         client_.setConnectionCallback([this](const TcpConnectionPtr& conn){
@@ -57,7 +57,7 @@ public:
 private:
     TcpConnectionPtr conn_;
     ConnectionCallback cb_;
-    BaseClient client_;
+    RpcClient client_;
 };
 
 #endif //ZRPC_[macroName]_H
