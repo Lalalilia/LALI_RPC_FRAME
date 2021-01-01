@@ -2,11 +2,7 @@
 
 整体架构图：
 
-<<<<<<< HEAD
-<img src="https://gitee.com/lalalilia/images-include/raw/master/project/RPCFRAME.JPG" alt="image-20210101143941368" width="500" height="450" />
-=======
 <img src="https://gitee.com/lalalilia/images-include/raw/master/project/RPCFRAME.JPG" alt="image-20210101143941368" style="zoom: 30%;" />
->>>>>>> ce963ddb9f5f439f573d63bbfc9af67d89b8e918
 
 1. **基本介绍**
 
