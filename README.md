@@ -2,7 +2,7 @@
 
 整体架构图：
 
-<img src="https://gitee.com/lalalilia/images-include/raw/master/project/RPCFRAME.JPG" alt="image-20210101143941368" style="zoom:67%;" />
+<img src="https://gitee.com/lalalilia/images-include/raw/master/project/RPCFRAME.JPG" alt="image-20210101143941368" style="zoom: 50%;" />
 
 1. **基本介绍**
 
@@ -132,7 +132,7 @@ test 文件夹中含 test.json 文件内容如下：
 
 系统 **Ubuntu18.04** ，socket ： 2，Core per Socket ： 2，主频：1800MHZ；
 
-<img src="https://gitee.com/lalalilia/images-include/raw/master/project/cpu.jpg" alt="image-20210101133839722" style="zoom: 67%;" />
+<img src="https://gitee.com/lalalilia/images-include/raw/master/project/cpu.jpg" alt="image-20210101133839722" style="zoom: 50%;" />
 
 ### 四线程
 
@@ -142,11 +142,11 @@ test 文件夹中含 test.json 文件内容如下：
 
 **服务器响应：**
 
-<img src="https://gitee.com/lalalilia/images-include/raw/master/project/4THREAD60S.JPG" alt="image-20210101145656741" style="zoom:67%;" />
+<img src="https://gitee.com/lalalilia/images-include/raw/master/project/4THREAD60S.JPG" alt="image-20210101145656741" style="zoom: 50%;" />
 
 **top 查看服务器资源利用：**
 
-<img src="https://gitee.com/lalalilia/images-include/raw/master/project/TOPINFO60S.JPG" alt="image-20210101145411123" style="zoom:67%;" />
+<img src="https://gitee.com/lalalilia/images-include/raw/master/project/TOPINFO60S.JPG" alt="image-20210101145411123" style="zoom: 50%;" />
 
 可以看到在 500 线程 持续 60s 的情况下，qps 达到了 **25755**；
 
@@ -156,7 +156,7 @@ test 文件夹中含 test.json 文件内容如下：
 
 如果只开 1 个线程（加上连接处理主线程共计 2 线程）进行测试，会发现结果如下：
 
-<img src="https://gitee.com/lalalilia/images-include/raw/master/project/1THREAD60S.JPG" alt="image-20210101150431916" style="zoom:67%;" />
+<img src="https://gitee.com/lalalilia/images-include/raw/master/project/1THREAD60S.JPG" alt="image-20210101150431916" style="zoom: 50%;" />
 
 qps 下降到了 **11478**，**所以本多线程服务器能够良好的利用多核环境**；
 
@@ -164,7 +164,7 @@ qps 下降到了 **11478**，**所以本多线程服务器能够良好的利用�
 
 如果开 4 线程（加上连接处理主线程共计 5 线程），超过了本机的核心数，结果如下：
 
-<img src="https://gitee.com/lalalilia/images-include/raw/master/project/5THREAD60S.JPG" alt="image-20210101150945653" style="zoom:67%;" />
+<img src="https://gitee.com/lalalilia/images-include/raw/master/project/5THREAD60S.JPG" alt="image-20210101150945653" style="zoom: 50%;" />
 
 qps 为 **17027**，是由于超过了 cpu 核数，发生了额外的上下文切换导致性能下降。
 
