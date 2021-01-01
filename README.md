@@ -1,5 +1,9 @@
 # LALI RPC FRAME
 
+整体架构图：
+
+<img src="https://gitee.com/lalalilia/images-include/raw/master/project/RPCFRAME.JPG" alt="image-20210101143941368" style="zoom:67%;" />
+
 1. **基本介绍**
 
 - 异步多线程的 RPC 框架。采用 json 格式的序列化 / 反序列化方案，程序自动生成 service/client stub 程序，用户 include 相应 stub 即可接收/发起 RPC ；客户端支持异步 RPC；服务端支持多线程 RPC, 即用户可以将 RPC 请求交给另一个线程 (或者线程池) 去执行，这样 IO 线程就可以立刻开始等待下一个请求。
@@ -121,4 +125,46 @@ test 文件夹中含 test.json 文件内容如下：
 即可生成 `RpcTestClientStub.h` 和 `RpcTestServiceStub.h` 两个头文件，再编译 `test/RpcClientTest.cpp` 及 `test/RpcServiceStub.cpp`  即可生成可执行文件，在这两个文件中包含了 上述两个头文件。
 
 
+
+## 压力测试
+
+由于没有两台机器，只能把服务端和客户端都设置在本地进行服务器测试。
+
+系统 **Ubuntu18.04** ，socket ： 2，Core per Socket ： 2，主频：1800MHZ；
+
+<img src="https://gitee.com/lalalilia/images-include/raw/master/project/cpu.jpg" alt="image-20210101133839722" style="zoom: 67%;" />
+
+### 四线程
+
+关闭日志写入及输出，使用 Webbench 进行测试，http 服务器中发送消息为内存中的 `hello` 加上了必要的 http 头，所以消除了磁盘 IO 的影响。开启 3 线程，包含连接线程共计 4 线程，进行测试。webbench 开启 500 线程，持续 60 s；
+
+以下是测试结果：
+
+**服务器响应：**
+
+<img src="https://gitee.com/lalalilia/images-include/raw/master/project/4THREAD60S.JPG" alt="image-20210101145656741" style="zoom:67%;" />
+
+**top 查看服务器资源利用：**
+
+<img src="https://gitee.com/lalalilia/images-include/raw/master/project/TOPINFO60S.JPG" alt="image-20210101145411123" style="zoom:67%;" />
+
+可以看到在 500 线程 持续 60s 的情况下，qps 达到了 **25755**；
+
+由于 load average 系统负载分别为 1 分钟，5 分钟，15 分钟，所以选择了压测时间为 60 s，在到时间后观察系统负载的第一个数值为 **5.39**，说明程序充分使用了 CPU，**us + sy = 49.2 < 70** ,有效的利用了 cpu 。
+
+### 双线程
+
+如果只开 1 个线程（加上连接处理主线程共计 2 线程）进行测试，会发现结果如下：
+
+<img src="https://gitee.com/lalalilia/images-include/raw/master/project/1THREAD60S.JPG" alt="image-20210101150431916" style="zoom:67%;" />
+
+qps 下降到了 **11478**，**所以本多线程服务器能够良好的利用多核环境**；
+
+### 五线程
+
+如果开 4 线程（加上连接处理主线程共计 5 线程），超过了本机的核心数，结果如下：
+
+<img src="https://gitee.com/lalalilia/images-include/raw/master/project/5THREAD60S.JPG" alt="image-20210101150945653" style="zoom:67%;" />
+
+qps 为 **17027**，是由于超过了 cpu 核数，发生了额外的上下文切换导致性能下降。
 

@@ -1,24 +1,19 @@
 //
-// Created by lalalilia on 11/30/20.
+// Created by lalalilia
 //
 
-
-
-#include <iostream>
 #include "net/EventLoop.h"
-#include "net/Channel.h"
-#include <sys/timerfd.h>
 #include "base/Thread.h"
 #include "net/ThreadEventLoop.h"
-#include "net/Acceptor.h"
 #include "net/AddressOps.h"
-#include "net/SocketOps.h"
-#include "net/TcpServer.h"
 #include "net/HttpServer.h"
 #include "net/HttpRequst.h"
 #include "net/HttpRespond.h"
 
 using namespace std;
+void outputEmpty(const char* msg,int len){
+
+}
 
 void onRequest(const HttpRequest& request,
                HttpRespond* respond){
@@ -27,7 +22,7 @@ void onRequest(const HttpRequest& request,
         respond->setStatusMessage(" Succeed ");
         respond->addHeader("Server","ZILI");
         respond->setBody("<html><head><title>This is title</title></head>"
-                         "<body><h1>Congradulation!</h1> "
+                         "<body><h1>hello</h1> "
                          "</body></html>");
     }
     else {
@@ -39,10 +34,11 @@ void onRequest(const HttpRequest& request,
 }
 
 int main(int argc,char* argv[]){
+    Logger::setOutput(outputEmpty); //设置 log 输出为空
     EventLoop ploop;
     AddressOps addr(8001);
     HttpServer server(&ploop,addr);
-    server.setThreadNums(2);
+    server.setThreadNums(3);
     server.setHttpCallbak(onRequest);
     server.start();
     ploop.loop();
