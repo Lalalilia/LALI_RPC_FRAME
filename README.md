@@ -41,6 +41,10 @@
 
 **jackson** 简单的开源 json 处理库（github 地址：https://github.com/guangqianpeng/jackson）
 
+代码总数：
+
+<img src="https://gitee.com/lalalilia/images-include/raw/master/project/CODESUM.jpg" alt="image-20210101143941368" width="700" height="270" />
+
 | 文件名                                                       | 简介                                                         |
 | ------------------------------------------------------------ | :----------------------------------------------------------- |
 | base/Mutex.h                                                 | 自行封装的一个锁类，能够将锁的lock和unlock用类的构造和析构函数自动执行，以免忘记将锁unlock； |
