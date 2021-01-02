@@ -1,5 +1,0 @@
-/home/lalalilia/LALI/LALI/CMakeFiles/rebuild_cache.dir
-/home/lalalilia/LALI/LALI/CMakeFiles/edit_cache.dir
-/home/lalalilia/LALI/LALI/CMakeFiles/RpcClient_test.dir
-/home/lalalilia/LALI/LALI/CMakeFiles/stub_test.dir
-/home/lalalilia/LALI/LALI/CMakeFiles/RpcServer_test.dir
