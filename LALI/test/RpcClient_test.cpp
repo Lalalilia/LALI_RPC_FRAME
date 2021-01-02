@@ -47,10 +47,10 @@ int main()
             loop.quit();
         }
         else {
-            // 每0.5秒进行一次 rpc 请求
+            // 每2秒进行一次 rpc 请求
             loop.runRepeat([&] {
                 run(client);
-            },0.5);
+            },2);
         }
     });
     client.start();

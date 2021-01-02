@@ -2,7 +2,7 @@
 
 整体架构图：
 
-<img src="https://gitee.com/lalalilia/images-include/raw/master/project/RPCFRAME.JPG" alt="image-20210101143941368" width="500" height="450" />
+<img src="https://gitee.com/lalalilia/images-include/raw/master/project/RPCFRAME.JPG" alt="image-20210101143941368" width="900" height="370" />
 
 1. **基本介绍**
 
@@ -21,14 +21,15 @@
 - 异步日志系统。使用双缓冲区及批处理方式
 - 使用 timerfd 将定时器当作 IO 事件处理，并使用红黑树进行定时器的关闭超时请求
 - 使用智能指针的 RAII 机制，减少了内存泄漏的可能
-- 支持服务器的优雅关闭
 - 具有简单 http 服务可提供 url 访问地址实现简单的服务器压力测试
+- 良好的缓冲 Buffer 类，使用 readv 散布读技术 scatter io ，把数据读到不连续的空间内，效率高于使用 std::string
+- 支持服务器的优雅关闭
 
 
 
 ## 代码介绍
 
-本项目基于 **Ubuntu18.04** 系统，使用了 **pthread** 线程库，使用了 C++ 11（实际上主要代码都是 C++ 11，但为了兼容开源的 json 库，库中使用了 string_view 这一结构，所以使用了 C++ 17 编译）
+本项目基于 **Ubuntu18.04** 系统，使用了 **pthread** 线程库，编译器 **gcc version 7.5.0** ，使用了 **C++ 11**（实际上主要代码都是 C++ 11，但为了兼容开源的 json 库，所以使用了 C++ 17 编译）
 
 **zrpc** 中含客户端和服务端的 RPC 协议及自动生成存根文件的实现代码。
 
@@ -38,7 +39,7 @@
 
 **test**  文件中包含一些简单的小程序测试，后续会逐渐完善。
 
-**jackson** 开源的 json 库
+**jackson** 简单的开源 json 处理库（github 地址：https://github.com/guangqianpeng/jackson）
 
 | 文件名                                                       | 简介                                                         |
 | ------------------------------------------------------------ | :----------------------------------------------------------- |
@@ -124,6 +125,8 @@ test 文件夹中含 test.json 文件内容如下：
 
 即可生成 `RpcTestClientStub.h` 和 `RpcTestServiceStub.h` 两个头文件，再编译 `test/RpcClientTest.cpp` 及 `test/RpcServiceStub.cpp`  即可生成可执行文件，在这两个文件中包含了 上述两个头文件。
 
+执行 rpc 服务器与 rpc 客户端后，可以使用 wireshark 抓包直接看到 json 数据的传输；
+
 
 
 ## 压力测试
@@ -134,7 +137,7 @@ test 文件夹中含 test.json 文件内容如下：
 
 <img src="https://gitee.com/lalalilia/images-include/raw/master/project/cpu.jpg" alt="image-20210101133839722" width="500" height="450" />
 
-### 四线程
+### 四线程压力测试
 
 关闭日志写入及输出，使用 Webbench 进行测试，http 服务器中发送消息为内存中的 `hello` 加上了必要的 http 头，所以消除了磁盘 IO 的影响。开启 3 线程，包含连接线程共计 4 线程，进行测试。webbench 开启 500 线程，持续 60 s；
 
@@ -150,21 +153,17 @@ test 文件夹中含 test.json 文件内容如下：
 
 可以看到在 500 线程 持续 60s 的情况下，qps 达到了 **25755**；
 
-由于 load average 系统负载分别为 1 分钟，5 分钟，15 分钟，所以选择了压测时间为 60 s，在到时间后观察系统负载的第一个数值为 **5.39**，说明程序充分使用了 CPU，**us + sy = 49.2 < 70** ,有效的利用了 cpu 。
+由于 load average 系统负载分别为 1 分钟，5 分钟，15 分钟，所以选择了压测时间为 60 s，在到时间后观察系统负载的第一个数值为 **5.39**，**us + sy = 49.2** ，cpu 被充分利用。
 
-### 双线程
+### 线程性能变化曲线图：
 
-如果只开 1 个线程（加上连接处理主线程共计 2 线程）进行测试，会发现结果如下：
+<img src="https://gitee.com/lalalilia/images-include/raw/master/project/CHART.JPG" alt="image-20210101150945653" width="600" height="350" />
 
-<img src="https://gitee.com/lalalilia/images-include/raw/master/project/1THREAD60S.JPG" alt="image-20210101150431916" width="600" height="250" />
+全测试环境均为同一系统，使用 webbench 500 线程 60 s 的测试规则；
 
-qps 下降到了 **11478**，**所以本多线程服务器能够良好的利用多核环境**；
+线程数 < 4 时，服务器没有充分发挥系统 cpu 多核优势，性能不强，并在线程数为 1 的时候，出现了 92 failed；
 
-### 五线程
+线程数 = 4 时，服务器性能达到峰值，证明充分利用了 cpu 多核优势；
 
-如果开 4 线程（加上连接处理主线程共计 5 线程），超过了本机的核心数，结果如下：
-
-<img src="https://gitee.com/lalalilia/images-include/raw/master/project/5THREAD60S.JPG" alt="image-20210101150945653" width="600" height="250" />
-
-qps 为 **17027**，是由于超过了 cpu 核数，发生了额外的上下文切换导致性能下降。
+线程数 > 4 时，服务器性能逐渐下降，原因是当运行的线程数大于核数时，线程间会发生 cpu 的资源争抢，造成许多不必要的上下文切换，拖慢了 cpu 处理的速度，这一现象在线程数越多时越明显。
 
