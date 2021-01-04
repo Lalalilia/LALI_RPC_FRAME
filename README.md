@@ -82,8 +82,8 @@
 
 如下安装本代码
 
-```
-git clone http://github.com/LALI_Project
+```shell
+git clone http://github.com/LALI_RPC_FRAME
 cd LALI_Project
 cmake .
 make
