@@ -9,7 +9,7 @@
 - 异步多线程的 RPC 框架。采用 json 格式的序列化 / 反序列化方案，程序自动生成 service/client stub 程序，用户 include 相应 stub 即可接收/发起 RPC ；客户端支持异步 RPC；服务端支持多线程 RPC, 即用户可以将 RPC 请求交给另一个线程 (或者线程池) 去执行，这样 IO 线程就可以立刻开始等待下一个请求。
 - 基于 NON-Blocking IO + IO multiplexing（epoll 水平触发） 的 Reactor 事件驱动模型的网络服务器。使用多线程充分利用多核 CPU，并使用了线程池避免了频繁创建销毁线程的开销，主线程只 accept 请求，以 Round Robin 的方式分发给其它 IO 线程，采用 eventfd 实现线程异步唤醒
 
-2. **RPC **
+2. **RPC设计**
 
 - 通过 `service.method` 唯一定义一个 procedure. 一个 TCP 端口可以对外提供多个 service, 一个 service 可以有多个 method；
 - 利用 stub 存根文件解析器直接解析 json 文件，自动生成存根程序；
