@@ -11,7 +11,7 @@
 
 2. **RPC **
 
-- 通过![[公式]](https://www.zhihu.com/equation?tex=service.method) 唯一定义一个 procedure. 一个 TCP 端口可以对外提供多个 service, 一个 service 可以有多个 method；
+- 通过 `service.method` 唯一定义一个 procedure. 一个 TCP 端口可以对外提供多个 service, 一个 service 可以有多个 method；
 - 利用 stub 存根文件解析器直接解析 json 文件，自动生成存根程序；
 - 存根文件 ServerStub ：可以将 json 请求消息里面的参数提取出来转化成普通的函数调用，然后把函数的返回值包装成一个 json 消息发出去；
 - 存根文件 ClientStub ：可以将函数的参数包装到 json 请求消息中，通过网络库发出，然后把收到的 json 回复消息的返回值、错误信息提取出来给用户回调；
